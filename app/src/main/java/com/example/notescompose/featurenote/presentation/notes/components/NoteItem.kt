@@ -1,6 +1,7 @@
 package com.example.notescompose.featurenote.presentation.notes.components
 
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
@@ -86,12 +87,13 @@ fun NoteItem(
             )
             IconButton(
                 onClick = onDeleteClick,
-                modifier = Modifier.align(Alignment.End)
+                modifier = Modifier
+                    .align(Alignment.End)
             ) {
                 Icon(
                     imageVector = Icons.Default.Delete,
-                    tint = MaterialTheme.colorScheme.surface,
-                    contentDescription = "Delete Note"
+                    tint = Color.White,
+                    contentDescription = "Delete Note",
                 )
             }
         }

@@ -3,6 +3,8 @@ package com.example.notescompose.featurenote.domain.model
 import androidx.compose.ui.graphics.Color
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.notescompose.ui.theme.SkyBlue
+import com.example.notescompose.ui.theme.Teal
 
 @Entity
 data class Note(
@@ -13,8 +15,8 @@ data class Note(
     @PrimaryKey val id: Int? = null
 ) {
     companion object {
-        val noteColors = listOf(Color.Blue, Color.Cyan, Color.LightGray, Color.Black)
+        val noteColors = listOf(SkyBlue, Color.Cyan, Color.LightGray, Teal)
     }
 }
 
-class InvalidNoteException(message: String): Exception(message)
+class InvalidNoteException(message: String) : Exception(message)
